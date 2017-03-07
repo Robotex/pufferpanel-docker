@@ -10,4 +10,4 @@ RUN apt-get update \
     && tar -xf /tmp/pufferpanel.tar.gz -C /srv \
     && a2enmod rewrite \
     && chmod +x /tmp/pufferpanel.exp \
-    && ./tmp/pufferpanel.exp
+    && /tmp/pufferpanel.exp
