@@ -6,7 +6,7 @@ ADD https://git.io/vDz1T /tmp/pufferpanel.tar.gz
 
 RUN apt-get update \
     && apt-get -y install libmcrypt-dev mysql-client expect \
-    && docker-php-ext-install -j$(nproc) mycrypt pdo pdo_mysql \    
+    && docker-php-ext-install -j$(nproc) mcrypt pdo pdo_mysql \    
     && tar -xf /tmp/pufferpanel.tar.gz -C /srv \
     && a2enmod rewrite \
     && chmod +x /tmp/pufferpanel.exp \
